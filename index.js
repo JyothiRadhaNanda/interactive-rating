@@ -34,11 +34,12 @@ function handleButtonClick(button) {
 }
 
 function submit() {
-  alert("Pilih dulu lah wak");
   if (currentActiveButton) {
     card1.classList.add("hidden");
     card2.classList.remove("hidden1");
     // num.textContent =
+  } else {
+    alert("Pilih dulu lah wak");
   }
 }
 
