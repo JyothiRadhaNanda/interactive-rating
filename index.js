@@ -1,7 +1,5 @@
-// Menyimpan referensi ke tombol yang aktif saat ini
 let currentActiveButton = null;
 
-// Mendapatkan elemen tombol
 const one = document.getElementById("1");
 const two = document.getElementById("2");
 const three = document.getElementById("3");
@@ -14,19 +12,15 @@ const card2 = document.getElementById("hidden1");
 // const status = document.getElementById("status");
 // const status = document.getElementById("status");
 
-// Fungsi untuk menangani klik pada tombol
 function handleButtonClick(button) {
-  // Jika ada tombol yang sebelumnya aktif, kembalikan ke keadaan semula
   if (currentActiveButton) {
     currentActiveButton.classList.add("button");
     currentActiveButton.classList.remove("active");
   }
 
-  // Mengatur tombol yang baru diklik menjadi aktif
   button.classList.add("active");
   button.classList.remove("button");
 
-  // Menyimpan referensi ke tombol yang aktif saat ini
   currentActiveButton = button;
   //   return button.id;
   //   num.textContent = `Active Button: ${button.id}`;
@@ -43,7 +37,6 @@ function submit() {
   }
 }
 
-// Menambahkan event listener pada setiap tombol
 one.addEventListener("click", () => handleButtonClick(one));
 two.addEventListener("click", () => handleButtonClick(two));
 three.addEventListener("click", () => handleButtonClick(three));
